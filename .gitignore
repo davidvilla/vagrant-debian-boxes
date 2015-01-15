@@ -1,2 +1,4 @@
 Debian-testing*
 iso
+*.box
+*~
