@@ -6,6 +6,8 @@ date > /etc/vagrant_box_build_time
 useradd -G sudo -p $(perl -e'print crypt("vagrant", "vagrant")') -m -s /bin/bash -N vagrant
 
 # Install vagrant keys
+apt-get -y install curl
+
 mkdir -pm 700 /home/vagrant/.ssh
 curl -Lo /home/vagrant/.ssh/authorized_keys \
   'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub'
@@ -17,5 +19,3 @@ echo 'Welcome to your Vagrant-built virtual machine.' > /var/run/motd
 
 # Install NFS client
 apt-get -y install nfs-common
-
-

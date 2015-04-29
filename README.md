@@ -14,8 +14,8 @@ manager to build the image.
 
 Just run the following command in the repository root:
 
-    $ veewee vbox build Debian-testing-amd64-netboot
-    $ veewee vbox export Debian-testing-amd64-netboot
+    $ veewee vbox build jessie-amd64
+    $ veewee vbox export jessie-amd64
 
 It is not currently possible to run it without GUI (`--nogui` option), since a
 bug in the grub-installer package
